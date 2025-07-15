@@ -1,5 +1,8 @@
 
+
 #C: 로컬 디스크로 위치변경 - > Develops 로 위치변경 후 ->현재 위치 확인
+
+
 PS C:\Users\Administrator> cd C:\
 PS C:\> cd C:\Develops
 PS C:\Develops> pwd
