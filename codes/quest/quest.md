@@ -347,6 +347,50 @@ PS C:\Develops\quest\my_project>
 ```
 
 ### 문제 5-3: 최종 확인
+- my_project 폴더의 모든 하위 내용을 재귀적으로 확인하세요
+
 ```
-확인 
+PS C:\Develops\quest\my_project> tree
+폴더 PATH의 목록입니다.
+볼륨 일련 번호는 52B6-33C5입니다.
+C:.
+├─build
+├─docs
+└─src
+PS C:\Develops\quest\my_project>
+```
+
+- 각 폴더로 이동하여 파일 내용을 확인하세요
+```
+PS C:\Develops\quest\my_project> cd C:\Develops\quest\my_project\build
+PS C:\Develops\quest\my_project\build> ls
+PS C:\Develops\quest\my_project\build> cd ..
+PS C:\Develops\quest\my_project> cd C:\Develops\quest\my_project\docs
+PS C:\Develops\quest\my_project\docs> ls
+
+
+    디렉터리: C:\Develops\quest\my_project\docs
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2025-07-15   오후 4:18             42 project_info.txt
+
+
+PS C:\Develops\quest\my_project\docs> cd ..
+PS C:\Develops\quest\my_project> cd C:\Develops\quest\my_project\src
+PS C:\Develops\quest\my_project\src> cd ..
+PS C:\Develops\quest\my_project> cd C:\Develops\quest\my_project\src
+PS C:\Develops\quest\my_project\src> ls
+
+
+    디렉터리: C:\Develops\quest\my_project\src
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2025-07-15   오후 4:20             46 main.py
+
+
+PS C:\Develops\quest\my_project\src>
 ```
