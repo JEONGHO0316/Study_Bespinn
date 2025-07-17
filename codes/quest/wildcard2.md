@@ -185,7 +185,7 @@ data/2024/{01,02,03} 구조로 디렉터리를 생성하세요
 - 힌트: 확장자가 .jpg, .png, .gif, .txt, .csv, .tar, .dat, .pdf, .ppt, .xls가 아닌 파일
 ```
 # 명령어를 작성하세요:
-[jeongho@localhost wildcard_file_practice]$ ls -l *.[a-z][a-z]
+[jeongho@localhost wildcard_file_practice]$  rm *.[a-z][a-z]
 
 ```
 
