@@ -112,6 +112,7 @@ ls: cannot access 'file3.txt': No such file or directory
 ### 3-3. 파일명이 `a`부터 `f`로 시작하는 모든 파일 출력
 ```bash
 # 명령어를 작성하세요
+# ls -l [a-f]*
 
 [jeongho@localhost wildcard_practice]$ ls -l *[a-f]*.*
 -rw-r--r--. 1 jeongho jeongho 0 Jul 17 14:37 backup_2023.tar
