@@ -7,18 +7,17 @@ input values : agument_first read_first
 
 
 ```
-[jeongho@localhost quest]$ source ./shell_read.sh agument_first read_first
-agument_first
-read_input: read_first
-read_first
+V_input="$1"
+echo "$V_input"
+read -p "read_input:" V_Re
+
+echo $V_Re
+
 ```
+
 ```
-V_agu="$1"
-V_input="$2"
-
-echo "$1"
-
-read -p "read_input: " "$2"
-echo "$2"
-
+[jeongho@localhost quest]$ source ./shell_read.sh text
+text
+read_input:asd
+asd
 ```
