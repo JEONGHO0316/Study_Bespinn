@@ -43,8 +43,6 @@ nohup: ignoring input
 nohup: ignoring input
 ^C
 [jeongho@192.168.0.47 ~/Downloads]$ source webserver.sh stop
-bash: kill: echo: arguments must be process or job IDs
-bash: kill: 서버가 종료되었습니다. : arguments must be process or job IDs
 [1]+  Killed                  nohup python3 -m http.server 8000 --bind 0.0.0.0 &>> server.log
 [jeongho@192.168.0.47 ~/Downloads]$ 
 
@@ -59,7 +57,7 @@ if [ "$1" == "start" ]; then
         echo "서버가 백그라운드에서 시작되었습니다."
 elif [ "$1" == "stop" ]; then
         PID_STOP=$(ps aux | grep "http.server 8000 --bind" | cut -d" " -f6 | head -n 1)
-        kill -9 $PID_STOP echo "서버가 종료되었습니다. "
+        kill -9 $PID_STOP 
 elif [ "$1" == "status" ]; then
         PID_NAME=$(ps aux | grep "http.server 8000 --bind" | cut -d" " -f6 | head -1)
 
