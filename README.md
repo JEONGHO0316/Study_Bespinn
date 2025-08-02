@@ -5,9 +5,8 @@
 - File & directory Command : [명령어](codes/20_controll_file_dir_powershells.sh)
 
 
-## Quests
-- quest : [link]()
-- quest2 : [link]()
-- quest3 : [link]()
-- whildcard : [link]()
-- wildcard : [link]()
+## Linux 
+- Linux : [명령어](codes/Linux_Practice/)
+
+## Linux Network 
+- Linux Network : [a명령어](codes/Linux_Network/)
