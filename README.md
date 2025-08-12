@@ -9,4 +9,7 @@
 - Linux : [Linux Practice List](codes/Linux_Practice/)
 
 ## Linux Network 
-- Linux Network : [Linux Network Practice list](codes/Linux_Network/)
+- Linux Network : [Linux Network Practice List](codes/Linux_Network/)
+
+## AWS 
+- AWS : [AWS List](codes/AWS/)
