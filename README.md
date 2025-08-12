@@ -1,4 +1,4 @@
-# study_linuxs
+# study_bespin
 ## PowerShell (GUI & CLI)
 
 - Searching Command : [Shell Practice](codes/10_powershell.sh)
@@ -12,4 +12,5 @@
 - Linux Network : [Linux Network Practice List](codes/Linux_Network/)
 
 ## AWS 
+
 - AWS : [AWS List](codes/AWS/)
