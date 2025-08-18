@@ -13,3 +13,17 @@ cd ./sd_day2_h2baseapp/ || exit
 chmod +x ./gradlew
 nohup ./gradlew bootRun > app.log 2>&1 &
 ```
+
+build 맛보기 
+```
+[ec2-user@ip-10-0-0-4 swu_stresstest_example]$ ls
+build  build.gradle  gradle  gradlew  gradlew.bat  settings.gradle  src
+[ec2-user@ip-10-0-0-4 swu_stresstest_example]$ cd build/
+[ec2-user@ip-10-0-0-4 build]$ ls
+classes  generated  libs  resolvedMainClassName  resources  tmp
+[ec2-user@ip-10-0-0-4 build]$ cd libs/
+[ec2-user@ip-10-0-0-4 libs]$ ls
+spring_rest-0.0.1-SNAPSHOT-plain.jar  spring_rest-0.0.1-SNAPSHOT.jar
+[ec2-user@ip-10-0-0-4 libs]$ java -jar spring_rest-0.0.1-SNAPSHOT.jar
+
+```
