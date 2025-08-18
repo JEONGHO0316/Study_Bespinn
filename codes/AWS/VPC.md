@@ -15,3 +15,14 @@ AWS - VPC 생성 후 삭제
   ]
 }
 ``` 
+
+자바&깃 설치와 버전확인
+```
+sudo yum install java-17-amazon-corretto-devel -y
+
+sudo dnf install git -y
+
+java -version
+
+git --version
+```
