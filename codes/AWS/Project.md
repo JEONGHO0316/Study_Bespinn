@@ -8,7 +8,7 @@ CPU사용량 60% 이상시 내 슬랙 계정에 알림 보내는 스크립트
 # 설정
 # -----------------------------
 LOG_DIR="/home/ec2-user/logs"
-SLACK_WEBHOOK="https://hooks.slack.com/services/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"
+SLACK_WEBHOOK="내 슬랙 ID"
 CPU_THRESHOLD=60       # CPU 임계값 60%
 ALERT_INTERVAL=10    # Slack 알림 최소 간격(초)
 mkdir -p "$LOG_DIR"
