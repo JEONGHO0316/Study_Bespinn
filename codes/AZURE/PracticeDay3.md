@@ -17,10 +17,10 @@ az acr list --resource-group rg-container --query "[].{acrLoginServer:loginServe
 
 #6. ACR로그인 서버의 정규화된 이름을 사용하여 이미지 태그 지정. 
 #레지스트리에 이미지를 푸시하려면 먼저 ACR로그인 서버의 정규화된 이름을 태그로 사용해야 한다.
-docker tag guestbook-app acrkdk.azurecr.io/guestbook:v1
+docker tag guestbook-app acrhjh.azurecr.io/guestbook:v1
 
 #7 도커 이미지를 ACR에 등록하기
-docker push acrkdk.azurecr.io/guestbook:v1
+docker push acrhjh.azurecr.io/guestbook:v1
 
 #8. 레지스트리의 리포지토리에서 업로드된 이미지 나열 (또는 포털 사용)
 az acr repository list --name crhjh --output table

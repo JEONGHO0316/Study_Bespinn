@@ -27,7 +27,7 @@ az logout
 az account list -o table
 
 #8. Azure 구독 변경
-az account set --subscription "03f991f0-1f2c-4a6b-8bb7-f93d9bfb5c0b"
+az account set --subscription "MYSUBID"
 
 #9. Azure 구독 정보 정리
 az account clear
@@ -54,9 +54,9 @@ Update-Help -Module ServerManager, Microsoft.PowerShell.LocalAccounts
 
 Update-Help –UICulture ko-KR, en-US
 
-Update-Help –SourcePath \\Server01\Share\Help -Credential DokyunPC\steelflea # 오프라인으로 업데이트 가능 하게 업데이트는 최신 버전으로 하는게 좋다.
+Update-Help –SourcePath \\Server01\Share\Help -Credential JEONGHO # 오프라인으로 업데이트 가능 하게 업데이트는 최신 버전으로 하는게 좋다.
 
-Save-Help –Module ServerManager -DestinationPath "C:\PowerShell_Lab\SavePSHelp" -Credential Dokyun-PC\steelflea
+Save-Help –Module ServerManager -DestinationPath "C:\PowerShell_Lab\SavePSHelp" -Credential JEONGHO
 
 #도움말 보는 방법
 Get-Help -Name New-Alias -full
