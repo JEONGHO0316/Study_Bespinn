@@ -1,0 +1,35 @@
+### Ubuntu 용 userdata , 메타 데이터 추가로 인해 인스턴스 id , AZ 표시 
+```
+#!/bin/bash
+apt update
+apt install -y apache2
+sed -i 's/Listen 80/Listen ${port_number}/' /etc/apache2/ports.conf
+systemctl enable apache2
+systemctl restart apache2    
+echo '<html><h1>Hello From your Ubuntu Web Server runnig on port : ${port_number}!</h1></html>' > /var/www/html/index.html
+
+TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"`
+
+echo `curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id` >> /var/www/html/index.html
+echo `curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/placement/availability-zone` >> /var/www/html/index.html
+```
+
+### Amazon Linux 용 userdata, 메타 데이터 의 함수화  
+```
+#!/bin/bash
+yum -y install httpd 
+sed -i 's/Listen 80/Listen ${port_number}/' /etc/httpd/conf/httpd.conf
+systemctl enable httpd 
+systemctl restart httpd 
+echo '<html><h1>Hello From My Linux Web Server ruuning on port ${port_number}!</h1></html>' > /var/www/html/index.html
+
+# 메타데이터 토큰 가져오기
+TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
+
+# ID와 AZ 가져오기 (공백 제거 및 $() 사용)
+ID=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id)
+AZ=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/placement/availability-zone)
+
+# 쉼표 제거 및 따옴표 처리
+printf " <h2> ID : %s <br> AZ : %s </h2> " "$ID" "$AZ" >> /var/www/html/index.html
+```
