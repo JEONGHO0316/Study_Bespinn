@@ -1,5 +1,5 @@
 
-
+기본 테라폼 명령
 ```
 terraform {
   required_providers {

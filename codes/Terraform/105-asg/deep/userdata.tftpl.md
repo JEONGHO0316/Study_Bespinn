@@ -1,0 +1,10 @@
+### Ubuntu 용 apache userdata 
+```
+#!/bin/bash
+apt update
+apt install -y apache2
+sed -i 's/Listen 80/Listen ${port_number}/' /etc/apache2/ports.conf
+systemctl enable apache2
+systemctl restart apache2    
+echo '<html><h1>Hello From your Ubuntu Web Server runnig on port : ${port_number}!</h1></html>' > /var/www/html/index.html
+```
