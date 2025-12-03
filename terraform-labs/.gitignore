@@ -1,0 +1,19 @@
+# .gitignore 파일 내용
+
+# 1. 파이썬 (가상환경, 캐시)
+.venv/
+__pycache__/
+
+# 2. 테라폼 (상태 파일, 임시 설정 파일) - 보안상 업로드 금지
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+.terraform.lock.hcl
+
+# 3. 보안 키 (폴더 통째로 무시)
+# keys 폴더 안에 있는 mykey, mykey.pub 등 모든 파일이 자동으로 제외됩니다.
+keys/
+
+# (선택사항) 혹시 모를 pem 키 파일도 제외
+*.pem
