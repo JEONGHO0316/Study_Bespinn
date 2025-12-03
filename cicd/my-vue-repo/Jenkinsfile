@@ -1,0 +1,40 @@
+pipeline {
+    agent any 
+
+    environment {
+        S3_BUCKET = 'vue-website-0316' 
+        AWS_DEFAULT_REGION = 'ap-northeast-2'
+    }
+
+    stages {
+        // ❌ [삭제됨] stage('Checkout') 블록 전체 삭제
+        // 젠킨스가 시작할 때 이미 코드를 다 받아옵니다.
+
+        stage('Install & Build') {
+            steps{
+                // node22가 젠킨스 설정에 등록되어 있는지 꼭 확인하세요
+                nodejs(nodeJSInstallationName: 'node22') {
+                    // 현재 폴더에 이미 코드가 있으므로 바로 설치/빌드 시작
+                    sh 'npm install'
+                    sh 'npm run build'
+                }
+            }
+        }
+
+        stage('Deploy to S3'){
+            steps{
+                // AWS 권한이 젠킨스 서버(EC2)에 있거나, withCredentials가 필요할 수 있음
+                sh "aws s3 sync ./dist s3://${env.S3_BUCKET} --delete"
+            }
+        }
+    }
+    
+    post{
+        success {
+            echo 'S3 배포 완료!'
+        }
+        failure {
+            echo '빌드 실패 ㅠㅠ'
+        }
+    }
+}
