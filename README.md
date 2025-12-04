@@ -31,7 +31,8 @@
 
 ## Terraform 
 - Terraform : [Terraform List](codes/Terraform/)
+- Terraform : [Terraform Code List](terraform-labs/)
 
 ## CI/CD 
 - CI/CD : [CICD List](codes/CICD/)
-
+- CI/CD : [CI/CD Code List](cicd/)
