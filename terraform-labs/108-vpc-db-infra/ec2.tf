@@ -135,7 +135,7 @@ resource "aws_db_instance" "tfdb" {
   engine_version    = "8.0"
   instance_class    = "db.t3.micro"
   username          = "admin"
-  password          = "ghdwjdgh2905!"
+  password          = ""
   # parameter_group_name = "default.mysql8.0"
   skip_final_snapshot = true
   # multi_az = true
