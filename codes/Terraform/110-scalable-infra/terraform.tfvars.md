@@ -15,7 +15,8 @@ alb_name                = "ex-alb"
 # DB 변수 설정 
 rds_security_group_name = "RDS-SG"
 db_id = "admin"
-db_passwd = "ghdwjdgh2905!"
+db_passwd = ""
 db_endpoint = "sscalble-db.cq0vkrx9gj0x.ap-northeast-2.rds.amazonaws.com"
 db_name = "scalbledb"
 ```
+
